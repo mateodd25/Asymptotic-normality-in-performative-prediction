@@ -1,4 +1,4 @@
-* Proximal Bundle Method
+* Asymptotic normality in performative prediction
 
 This repository is a supplement for "Asymptotic normality in performative prediction" by Joshua Cutler, Mateo Diaz, and Dmitriy Drusvyatskiy.
 

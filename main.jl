@@ -1,8 +1,6 @@
 using LinearAlgebra
 using Random
 using JLD2
-using Profile
-using PProf
 
 function draw_running_average(num_iterations, rho)
     current_iterate = zeros(2)
@@ -19,7 +17,7 @@ end
 function main()
     Random.seed!(2625)
     rhos = [0.0, 0.25, 0.5, 0.75, 0.9]
-    sample_size = 300
+    sample_size = 400
     num_iter = Int(1e7)
     samples = Dict()
     for rho in rhos
