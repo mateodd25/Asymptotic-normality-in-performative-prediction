@@ -6,7 +6,7 @@ This repository is a supplement for "Asymptotic normality in performative predic
 
 *The instructions assume that your current working directory is the base of this repository.*
 
-The code in this repository is written in Julia. To set the environment install Julia 1.7.1 from https://julialang.org/downloads/ and make sure =julia= is available in your =PATH=.
+The code in this repository is written in Julia. To set the environment, install Julia 1.7.3 from https://julialang.org/downloads/ and make sure =julia= is available in your =PATH=.
 
 Instantiate the Julia packages
 #+begin_src
@@ -19,18 +19,18 @@ To generate the deviation samples execute
 #+begin_src
 $ julia --threads 4 --project=. main.jl
 #+end_src
-You can modify the number of threads to make further use of your processor.
+You can modify the number of threads to use your processor further. This will create a file with the results under the name =results.jld2=.
 
-*Warning*: running this command might take a while. We included the run we generated for the paper in the repository under the name =results.jld2=.
+*Warning*: running this command might take a while. We include the run we generated for the paper in this repository.
 
-To draw the contour plots in Figure 1 of the paper run
+After generating the results file, draw the contour plots from Figure 1 of the paper by running
 #+begin_src
 $ julia --project=. print_kde.jl
 #+end_src
 
 *** Random seed
-We fixed the random seeds for the reproducibility of the experiments. In case you want to change it, look for the line
+We fixed the random seeds in pro of the reproducibility of the experiments. In case you want to change it: look for the line
 #+begin_src julia
-Random.seed!(2526)
+Random.seed!(2625)
 #+end_src
-in both =main.jl= (line 20) and =print_kde.jl= (line 9) and change the input.
+in both =main.jl= (line 20) and =print_kde.jl= (line 9) and modify  the input.
